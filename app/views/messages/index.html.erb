@@ -1,2 +1,13 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+Signed in as @<%= cookies.signed[:username]%>.
+<br><br>
+
+<div id='messages'></div>
+<!-- Here, append all messages coming through the channel -->
+<br><br>
+
+<!-- form submits messages via AJAX request to avoid page reloads -->
+<%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
+	<%= f.label :body, 'Enter a message:' %><br>
+	<%= f.text_field :body %><br />
+	<%= f.submit 'Send Message' %>
+<% end %>
