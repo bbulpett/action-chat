@@ -6,6 +6,7 @@ gem 'sprockets', github: "rails/sprockets"
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'arel', github: "rails/arel"
 gem 'rack', github: "rack/rack"
+gem 'actioncable', github: 'rails/actioncable'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -32,7 +33,7 @@ gem 'jbuilder', '~> 2.0'
 # Actually I want puma for the app server because it needs to be multi-threaded
 gem 'puma'
 # Redis is an extremely fast, atomic key-value store.
-gem 'redis', '2.1.1'
+gem 'redis', '~> 3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
