@@ -31,7 +31,8 @@ gem 'jbuilder', '~> 2.0'
 
 # Actually I want puma for the app server because it needs to be multi-threaded
 gem 'puma'
-
+# Redis is an extremely fast, atomic key-value store.
+gem 'redis', '2.1.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
