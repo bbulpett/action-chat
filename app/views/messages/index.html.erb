@@ -1,13 +1,14 @@
 Signed in as @<%= cookies.signed[:username]%>.
 <br><br>
-
 <div id='messages'></div>
 <!-- Here, append all messages coming through the channel -->
-<br><br>
-
+<br>
+<div id='chat-form'>
+<br>
 <!-- form submits messages via AJAX request to avoid page reloads -->
-<%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
-	<%= f.label :body, 'Enter a message:' %><br>
-	<%= f.text_field :body %><br />
-	<%= f.submit 'Send Message' %>
+  <%= form_for @message, remote: true do |f| %>
+    <%= link_to "@#{current_username}", root_path %>:
+    <%= f.text_field :body, autofocus: true %>
+  <% end %>
+</div>
 <% end %>
